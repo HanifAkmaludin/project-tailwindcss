@@ -48,34 +48,3 @@ hamburger.addEventListener("click", () => {
         container.classList.toggle("lebar");
     }
 });
-
-// @keyframes lebarReverse {
-//     0% {
-//         @apply w-full h-[300px];
-//     }
-//     50% {
-//         @apply w-full h-[33px];
-//     }
-//     100% {
-//         @apply w-[60%] h-[33px];
-//     }
-// }
-
-// .lebar {
-//     @apply lebar 1.5s forwards;
-// }
-
-// .lebarReverse {
-//     @apply lebarReverse 1.5s forwards;
-// }
-// @keyframes lebar {
-//     0% {
-//         @apply w-[60%] h-[33px];
-//     }
-//     50% {
-//         @apply w-full h-[33px];
-//     }
-//     100% {
-//         @apply w-full h-[300px];
-//     }
-// }
