@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,28 +15,114 @@
         <!-- FONT AWESOME -->
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
         />
         <link rel="stylesheet" href="./dist/style.css" />
         <title>Document</title>
     </head>
-    <body>
+    <body id="body">
         <!-- NAVBAR -->
-        <section id="navbar" class="fixed w-full bg-transparent z-[999]">
-            <div class="container flex justify-between py-[44px]">
+        <!-- <section
+            id="navbar"
+            class="px-[25px] fixed w-full bg-transparent z-[999]"
+        >
+            <div class="container flex justify-between py-[44px] duration-300">
                 <div class="navbar-brand">
                     <h1 class="font-bold text-lg leading-[23px] text-primary">
                         LUGAR
                     </h1>
                 </div>
-                <div class="navbar-links">
+                <div class="navbar-links hidden lg:block">
                     <ul
                         class="flex gap-[76px] font-normal text-sm leading-[18px] uppercase text-primary"
                     >
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#body">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#project">Project</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+
+        <section
+            id="navbar"
+            class="px-[25px] fixed w-full bg-transparent z-[999]"
+        >
+            <!-- lg:bg-transparent lg:shadow-none lg:px-0 lg:h-auto lg:rounded-none lg:bg-white-->
+            <div
+                class="container flex flex-col items-center duration-300 py-[5px] w-[60%] relative bg-white shadow-xl px-[30px] rounded-3xl mt-5 overflow-y-hidden h-[33px] sm:w-[40%] lg:py-[44px] lg:w-full lg:justify-between lg:flex-row lg:static"
+            >
+                <div
+                    class="nav flex justify-between items-center absolute px-[30px] w-full duration-500 z-30 lg:static lg:px-0 lg:w-auto"
+                >
+                    <div class="navbar-brand">
+                        <h1
+                            class="font-bold text-lg leading-[23px] text-primary"
+                        >
+                            LUGAR
+                        </h1>
+                    </div>
+                    <div class="hamburger flex flex-col gap-[5px] lg:hidden">
+                        <span
+                            class="block w-[25px] h-[3px] bg-primary rounded-[20px] duration-300"
+                        ></span>
+                        <span
+                            class="block w-[25px] h-[3px] bg-primary rounded-[20px] duration-300"
+                        ></span>
+                        <span
+                            class="block w-[25px] h-[3px] bg-primary rounded-[20px] duration-300"
+                        ></span>
+                    </div>
+                </div>
+                <!-- absolute bottom-5 -->
+                <!-- <div class="navbar-links hidden lg:block">
+                    <ul
+                        class="flex gap-[76px] font-normal text-sm leading-[18px] uppercase text-primary"
+                    >
+                        <li><a href="#body">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#project">Project</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div> -->
+                <div
+                    class="navbar-links w-full duration-500 absolute bottom-10 px-[30px] lg:block lg:static lg:px-0 lg:w-auto"
+                >
+                    <ul
+                        class="flex flex-col items-center gap-[20px] font-normal text-sm leading-[18px] text-primary uppercase lg:gap-[76px] lg:flex-row"
+                    >
+                        <li class="w-full lg:w-auto">
+                            <a
+                                href="#body"
+                                class="block bg-transparent py-[10px] w-full rounded-[20px] text-center hover:bg-hero hover:text-white duration-300 lg:hover:bg-transparent lg:inline lg:hover:text-primary lg:text-start"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="w-full lg:w-auto">
+                            <a
+                                href="#about"
+                                class="block bg-transparent py-[10px] w-full rounded-[20px] text-center hover:bg-hero hover:text-white duration-300 lg:hover:bg-transparent lg:inline lg:hover:text-primary"
+                                >About</a
+                            >
+                        </li>
+                        <li class="w-full lg:w-auto">
+                            <a
+                                href="#project"
+                                class="block bg-transparent py-[10px] w-full rounded-[20px] text-center hover:bg-hero hover:text-white duration-300 lg:hover:bg-transparent lg:inline lg:hover:text-primary"
+                                >Project</a
+                            >
+                        </li>
+                        <li class="w-full lg:w-auto">
+                            <a
+                                href="#contact"
+                                class="block bg-transparent py-[10px] w-full rounded-[20px] text-center hover:bg-hero hover:text-white duration-300 lg:hover:bg-transparent lg:inline lg:hover:text-primary"
+                                >Contact</a
+                            >
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -45,29 +131,33 @@
         <!-- HERO -->
         <section
             id="hero"
-            class="bg-hero bg-[url(../assets/img/hero.png)] bg-no-repeat bg-right pt-[176px] pb-[160px]"
+            class="bg-hero bg-[length:300px] bg-right-bottom bg-[url(../assets/img/hero.png)] bg-no-repeat lg:bg-right-bottom pt-[100px] pb-[160px] px-[25px] sm:px-0 lg:bg-[length:500px] lg:pt-[176px] xl:bg-auto"
         >
             <div class="container flex items-center">
-                <div class="title w-col-7">
+                <div
+                    class="title relative w-full lg:after:content-[' '] lg:after:block lg:after:bg-[url(../assets/img/Group.png)] lg:after:w-[160px] lg:after:h-[104px] lg:after:bg-no-repeat lg:after:absolute lg:after:bottom-[-30px] lg:after:right-[25px] lg:w-col-7 xl:after:bottom-[10px]"
+                >
                     <h1
-                        class="font-bold text-[90px] leading-[120%] text-primary mb-[18px]"
+                        class="font-bold text-[62px] leading-[120%] text-primary mb-[18px] lg:text-[90px]"
                     >
                         A home is built with love and dreams
                     </h1>
                     <p
-                        class="font-normal text-lg leading-[120%] text-primary mb-8"
+                        class="font-normal text-base leading-[120%] text-primary mb-8 lg:text-lg"
                     >
                         Real estate farm that makes your dreams true
                     </p>
                     <div
                         class="action flex gap-[30px] font-normal text-sm leading-[120%]"
                     >
-                        <a href="#" class="py-[18px] px-6 text-white bg-primary"
+                        <a
+                            href="#"
+                            class="py-[18px] px-6 text-white bg-primary shadow-lg sm:shadow-none"
                             >Our projects</a
                         >
                         <a
                             href="#"
-                            class="py-[18px] px-6 text-primary border border-primary"
+                            class="py-[18px] px-6 text-primary border border-primary shadow-lg sm:shadow-none"
                             >Contact us</a
                         >
                     </div>
@@ -76,55 +166,63 @@
         </section>
 
         <!-- ABOUT -->
-        <section id="about">
-            <div class="container flex justify-between py-[150px] items-center">
-                <div class="about-img w-col-5">
+        <section id="about" class="px-[25px] sm:px-0">
+            <div
+                class="container flex flex-col-reverse items-center py-[75px] lg:justify-between lg:flex-row lg:py-[150px]"
+            >
+                <div
+                    class="about-img w-col-12 flex justify-center sm:w-col-7 lg:w-col-5"
+                >
                     <img src="./assets/img/about.png" alt="House" />
                 </div>
-                <div class="description flex flex-col gap-[40px] w-col-6">
-                    <h2 class="font-bold text-5xl leading-[120%] text-primary">
+                <div
+                    class="description flex flex-col gap-[40px] w-col-12 sm:text-center lg:w-col-6 lg:text-start"
+                >
+                    <h2
+                        class="font-bold text-4xl leading-[120%] text-primary lg:text-5xl"
+                    >
                         Award winning real estate company in Dubai
                     </h2>
                     <p
-                        class="font-normal text-lg leading-[120%] text-secondary"
+                        class="font-normal text-base leading-[120%] text-secondary lg:text-lg"
                     >
                         Semper arcu mauris aliquam lacus. Massa erat vitae
                         ultrices pharetra scelerisque. Ipsum, turpis facilisis
                         tempor pulvinar in lobortis ornare magna.
                     </p>
-                    <div class="detail flex">
+                    <div class="detail flex mb-[44px] sm:justify-center">
                         <div class="previous-project mr-[44px]">
                             <p
-                                class="font-bold text-sm leading-[120%] uppercase text-hero"
+                                class="font-bold text-xs leading-[120%] uppercase text-hero lg:text-sm"
                             >
                                 Previous projects
                             </p>
                             <p
-                                class="font-light text-5xl leading-[120%] text-primary"
+                                class="font-light text-3xl leading-[120%] text-primary lg:text-5xl"
                             >
                                 34+
                             </p>
                         </div>
                         <div class="years-experience mr-[53px]">
                             <p
-                                class="font-bold text-sm leading-[120%] uppercase text-hero"
+                                class="font-bold text-xs leading-[120%] uppercase text-hero lg:text-sm"
                             >
                                 years experience
                             </p>
                             <p
-                                class="font-light text-5xl leading-[120%] text-primary"
+                                class="font-light text-3xl leading-[120%] text-primary lg:text-5xl"
                             >
                                 20y
                             </p>
                         </div>
                         <div class="previous-project">
                             <p
-                                class="font-bold text-sm leading-[120%] uppercase text-hero"
+                                class="font-bold text-xs leading-[120%] uppercase text-hero lg:text-sm"
                             >
                                 Ongoing projects
                             </p>
                             <p
-                                class="font-light text-5xl leading-[120%] text-primary"
+                                class="font-light text-3xl leading-[120%] text-primary lg:text-5xl"
                             >
                                 12
                             </p>
@@ -134,35 +232,164 @@
             </div>
         </section>
 
+        <!-- PROJECT -->
+        <section id="project" class="px-[25px] sm:px-0">
+            <div class="container pt-[48px] pb-[86px]">
+                <div
+                    class="title mb-[52px] text-center lg:text-start lg:mb-[84px]"
+                >
+                    <h2
+                        class="font-bold text-4xl leading-[120%] text-primary mb-3 lg:text-5xl"
+                    >
+                        Ongoing projects
+                    </h2>
+                    <div
+                        class="action flex flex-col lg:justify-between lg:flex-row"
+                    >
+                        <p
+                            class="font-normal text-base leading-[120%] m-5 text-secondary lg:m-0 lg:text-lg"
+                        >
+                            Turpis facilisis tempor pulvinar in lobortis ornare
+                            magna.
+                        </p>
+                        <div
+                            class="button-slide flex justify-center gap-[12px] lg:justify-start"
+                        >
+                            <i
+                                class="fa-solid fa-arrow-left text-hero text-[22px]"
+                            ></i>
+                            <i
+                                class="fa-solid fa-arrow-right text-hero text-[22px]"
+                            ></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards flex justify-center gap-[30px]">
+                    <div
+                        class="card relative flex flex-col items-center md:w-col-5 lg:w-col-4"
+                    >
+                        <div class="card-img">
+                            <img
+                                src="./assets/img/project1.png"
+                                alt="project1"
+                                class="object-cover"
+                            />
+                        </div>
+                        <div
+                            class="detail absolute bg-white shadow-card bottom-[-8.57%] py-[22px] px-[20px] w-[90%] xl:w-[290px] xl:h-[80px]"
+                        >
+                            <h4
+                                class="font-bold text-sm leading-[120%] text-primary mb-[6px]"
+                            >
+                                Vintage Villa
+                            </h4>
+                            <div class="address flex gap-1 items-center">
+                                <i class="fa-solid fa-location-dot text-xs"></i>
+                                <p
+                                    class="font-normal text-[10px] leading-[120%] text-primary"
+                                >
+                                    2715 Ash Dr. San Jose, Dubai
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="card relative hidden md:flex md:flex-col md:items-center md:w-col-5 lg:w-col-4"
+                    >
+                        <div class="card-img">
+                            <img
+                                src="./assets/img/project2.png"
+                                alt="project1"
+                                class="object-cover"
+                            />
+                        </div>
+                        <div
+                            class="detail absolute bg-white shadow-card bottom-[-8.57%] py-[22px] px-[20px] w-[90%] xl:w-[290px] xl:h-[80px]"
+                        >
+                            <h4
+                                class="font-bold text-sm leading-[120%] text-primary mb-[6px]"
+                            >
+                                Tonga Villa
+                            </h4>
+                            <div class="address flex gap-1 items-center">
+                                <i class="fa-solid fa-location-dot text-xs"></i>
+                                <p
+                                    class="font-normal text-[10px] leading-[120%] text-primary"
+                                >
+                                    1901 Thornridge Cir. Shiloh 81063
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="card relative hidden lg:flex lg:flex-col lg:items-center lg:w-col-4"
+                    >
+                        <div class="card-img">
+                            <img
+                                src="./assets/img/project3.png"
+                                alt="project1"
+                                class="object-cover"
+                            />
+                        </div>
+                        <div
+                            class="detail absolute bg-white shadow-card bottom-[-8.57%] py-[22px] px-[20px] w-[90%] xl:w-[290px] xl:h-[80px]"
+                        >
+                            <h4
+                                class="font-bold text-sm leading-[120%] text-primary mb-[6px]"
+                            >
+                                Penthouse
+                            </h4>
+                            <div class="address flex gap-1 items-center">
+                                <i class="fa-solid fa-location-dot text-xs"></i>
+                                <p
+                                    class="font-normal text-[10px] leading-[120%] text-primary"
+                                >
+                                    2464 Royal Ln. Mesa, 45463
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- COMMENT -->
-        <section id="comment">
+        <section id="comment" class="px-[25px] sm:px-0">
             <div class="container pt-[54px] pb-[126px]">
-                <div class="title text-center mb-[78px]">
-                    <h2 class="font-bold text-5xl leading-[120%] text-primary">
+                <div class="title text-center mb-[48px] w-col-12 lg:mb-[78px]">
+                    <h2
+                        class="font-bold text-4xl mb-[12px] leading-[120%] text-primary lg:text-5xl"
+                    >
                         Few smiles and comment
                     </h2>
-                    <p class="font-normal text-lg leading-[120%] text-primary">
+                    <p
+                        class="font-normal text-base leading-[120%] text-primary lg:text-lg"
+                    >
                         Turpis facilisis tempor pulvinar in lobortis ornare
                         magna.
                     </p>
                 </div>
-                <div class="detail flex items-center justify-between">
-                    <div class="detail-img w-col-5">
+                <div
+                    class="detail flex flex-col items-center justify-between lg:flex-row"
+                >
+                    <div
+                        class="detail-img w-col-12 mb-[36px] sm:w-col-7 lg:mb-0 lg:w-col-5"
+                    >
                         <img src="./assets/img/comment.png" alt="people" />
                     </div>
-                    <div class="description w-col-6">
+                    <div class="description w-col-12 lg:w-col-6">
                         <img
                             src="./assets/img/quote.png"
                             alt="quote"
                             class="mb-[18px]"
                         />
                         <h3
-                            class="font-bold text-[32px] leading-10 text-primary mb-[18px]"
+                            class="font-bold text-2xl leading-8 text-primary mb-[18px] lg:text-[32px] lg:leading-10"
                         >
                             Dream house isn’t dream anymore
                         </h3>
                         <p
-                            class="font-light text-2xl leading-[120%] text-primary mb-[18px]"
+                            class="font-light text-lg leading-[120%] text-primary mb-[18px] lg:text-2xl"
                         >
                             Semper arcu mauris aliquam lacus. Massa erat vitae
                             ultrices pharetra scelerisque. Ipsum, turpis
@@ -170,12 +397,12 @@
                         </p>
                         <div class="name">
                             <p
-                                class="font-semibold text-2xl leading-[120%] text-primary mb-[4px]"
+                                class="font-semibold text-lg leading-[120%] text-primary mb-[4px] lg:text-2xl"
                             >
                                 Brooklyn Simmons
                             </p>
                             <p
-                                class="font-normal text-lg leading-[120%] text-primary"
+                                class="font-normal text-base leading-[120%] text-primary lg:text-lg"
                             >
                                 Artist
                             </p>
@@ -186,50 +413,61 @@
         </section>
 
         <!-- CONTACT -->
-        <section id="contact">
-            <div class="container flex justify-between items-center py-[100px]">
-                <div class="contact-img w-col-5">
+        <section id="contact" class="px-[25px] sm:px-0">
+            <div
+                class="container flex justify-between items-center pt-[50px] pb-[100px] lg:py-[100px]"
+            >
+                <div class="contact-img hidden lg:block lg:w-col-5">
                     <img src="./assets/img/contact.png" alt="house" />
                 </div>
-                <div class="form-contact w-col-6">
+                <div
+                    class="form-contact w-full text-center lg:w-col-6 lg:text-start"
+                >
                     <h2
-                        class="font-bold text-5xl leading-[120%] text-primary mb-[12px]"
+                        class="font-bold text-4xl leading-[120%] text-primary mb-[12px] lg:text-5xl"
                     >
                         Contact us
                     </h2>
                     <p
-                        class="font-normal text-lg leading-[120%] text-secondary mb-[40px]"
+                        class="font-normal text-base leading-[120%] text-secondary mb-[40px] lg:text-lg"
                     >
                         Turpis facilisis tempor pulvinar in lobortis ornare
                         magna.
                     </p>
-                    <form action="#" class="flex flex-col gap-[18px]">
-                        <div class="contact-name flex justify-between">
+                    <form
+                        action="#"
+                        class="flex flex-col w-full gap-[18px] md:w-col-9 md:mx-auto lg:w-full lg:mx-0"
+                    >
+                        <div
+                            class="contact-name flex flex-col gap-[18px] lg:gap-0 lg:justify-between lg:flex-row"
+                        >
                             <input
                                 type="text"
                                 name="name"
                                 placeholder="First name"
-                                class="font-normal text-lg leading-[120%] text-secondary border border-primary py-[14px] px-[18px] focus:outline-none"
+                                class="font-normal text-lg leading-[120%] text-primary border border-primary py-[14px] px-[18px] focus:outline-none placeholder:text-secondary"
                             />
                             <input
                                 type="text"
                                 name="name"
                                 placeholder="Last name"
-                                class="font-normal text-lg leading-[120%] text-secondary border border-primary py-[14px] px-[18px] focus:outline-none"
+                                class="font-normal text-lg leading-[120%] text-primary border border-primary py-[14px] px-[18px] focus:outline-none placeholder:text-secondary"
                             />
                         </div>
-                        <div class="contact-address flex justify-between">
+                        <div
+                            class="contact-address flex flex-col gap-[18px] lg:gap-0 lg:flex-row lg:justify-between"
+                        >
                             <input
                                 type="email"
                                 name="email"
                                 placeholder="Email address"
-                                class="font-normal text-lg leading-[120%] text-secondary border border-primary py-[14px] px-[18px] focus:outline-none"
+                                class="font-normal text-lg leading-[120%] text-primary border border-primary py-[14px] px-[18px] focus:outline-none placeholder:text-secondary"
                             />
                             <input
                                 type="number"
                                 name="email"
                                 placeholder="Phone number"
-                                class="font-normal text-lg leading-[120%] text-secondary border border-primary py-[14px] px-[18px] focus:outline-none"
+                                class="font-normal text-lg leading-[120%] text-primary border border-primary py-[14px] px-[18px] focus:outline-none placeholder:text-secondary"
                             />
                         </div>
                         <div class="message w-full">
@@ -237,7 +475,7 @@
                                 name="message"
                                 id="message"
                                 placeholder="Description"
-                                class="font-normal text-lg leading-[120%] text-secondary border border-primary py-[14px] px-[18px] focus:outline-none w-full"
+                                class="font-normal text-lg leading-[120%] text-primary border border-primary py-[14px] px-[18px] focus:outline-none w-full placeholder:text-secondary"
                             ></textarea>
                         </div>
                         <div class="button flex items-center gap-[18px]">
@@ -259,9 +497,11 @@
         </section>
 
         <!-- FOOTER -->
-        <section id="footer" class="bg-primary">
+        <section id="footer" class="bg-primary px-[25px] sm:px-0">
             <div class="container pt-[90px] pb-[45px]">
-                <div class="links flex justify-between mb-[119px]">
+                <div
+                    class="links flex flex-col gap-[40px] mb-[119px] lg:justify-between lg:flex-row lg:gap-0"
+                >
                     <div class="office">
                         <h4
                             class="font-bold text-lg leading-[23px] uppercase text-white mb-[12px]"
@@ -274,7 +514,7 @@
                                     class="fa-sharp fa-solid fa-location-dot text-sm text-secondary"
                                 ></i>
                                 <p
-                                    class="font-normal text-sm leading-[18px] text-secondary w-[60%]"
+                                    class="font-normal text-sm leading-[18px] text-secondary w-full lg:w-[60%]"
                                 >
                                     2118 Thornridge Cir. Dubai, UAE 35624
                                 </p>
@@ -301,7 +541,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="navigation flex">
+                    <div
+                        class="navigation flex flex-col gap-[40px] lg:flex-row lg:gap-0"
+                    >
                         <div class="quick-links mr-[76px]">
                             <h4
                                 class="font-bold text-lg leading-[23px] text-white uppercase mb-[12px]"
@@ -311,10 +553,10 @@
                             <ul
                                 class="font-normal text-sm leading-[18px] text-secondary flex flex-col gap-[12px]"
                             >
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Project</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#body">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#project">Project</a></li>
+                                <li><a href="#contact">Contact</a></li>
                             </ul>
                         </div>
                         <div class="legal-links mr-[75px]">
@@ -348,7 +590,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="copyright">
+                <div class="copyright text-center lg:text-start">
                     <p
                         class="font-normal text-xs leading-[15px] text-secondary"
                     >
@@ -357,5 +599,7 @@
                 </div>
             </div>
         </section>
+
+        <script src="./js/script.js"></script>
     </body>
 </html>
